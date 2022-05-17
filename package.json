@@ -1,0 +1,24 @@
+{
+  "name": "serverless-ts-example",
+  "version": "1.0.0",
+  "description": "Example API using Serverless with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewrogers/serverless-ts-example.git"
+  },
+  "keywords": [
+    "serverless",
+    "api",
+    "typescript"
+  ],
+  "author": "Erik Rogers <ewrogers@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ewrogers/serverless-ts-example/issues"
+  },
+  "homepage": "https://github.com/ewrogers/serverless-ts-example#readme"
+}
