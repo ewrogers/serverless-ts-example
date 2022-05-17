@@ -1,16 +1,13 @@
+import { APIGatewayProxyHandler } from 'aws-lambda'
 
-export async function hello(event, context, callback) {
-  console.log('Hello world')
-
+export const hello: APIGatewayProxyHandler = async (event) => {
   await new Promise((resolve) => setTimeout(resolve, 500))
 
-  const response = {
+  return {
     statusCode: 200,
     body: JSON.stringify({
       message: 'Go Serverless! Your function executed successfully.',
-      input: event
-    })
+      input: event,
+    }),
   }
-
-  callback(null, response)
 }
