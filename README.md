@@ -5,9 +5,15 @@ Based on https://www.serverless.com/framework/docs/getting-started/
 
 ## Requirements
 
-- Node.js
+- Node.js 16.x+
 - Serverless CLI
 - AWS Account
+
+## Plugins
+These are the plugins that are used with the Serverless framework:
+
+- [serverless-plugin-typescript](https://www.serverless.com/plugins/serverless-plugin-typescript)
+- [serverless-offline](https://www.serverless.com/plugins/serverless-offline)
 
 ## AWS Credentials
 In the interest of keeping this example as simple and straightforward as possible, AWS Access Keys are used.

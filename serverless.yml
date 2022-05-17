@@ -1,0 +1,19 @@
+service: serverless-ts-app
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+
+functions:
+  hello:
+    handler: src/http/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
