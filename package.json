@@ -34,7 +34,9 @@
   },
   "homepage": "https://github.com/ewrogers/serverless-ts-example#readme",
   "dependencies": {
-    "aws-sdk": "^2.1137.0"
+    "@aws-sdk/client-dynamodb": "^3.92.0",
+    "@aws-sdk/lib-dynamodb": "^3.92.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",

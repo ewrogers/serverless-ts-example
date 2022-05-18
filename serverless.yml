@@ -16,7 +16,7 @@ functions:
     handler: src/api.createUser
     events:
       - http:
-          path: user
+          path: /users/
           method: post
 
 custom:
