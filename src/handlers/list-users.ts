@@ -22,7 +22,7 @@ export const listUsers: APIGatewayProxyHandler = async (event) => {
   )
 
   return {
-    statusCode: 201,
+    statusCode: 200,
     body: JSON.stringify({
       limit,
       data: Items ?? [],
