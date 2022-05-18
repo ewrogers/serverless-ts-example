@@ -10,6 +10,7 @@
     "invoke": "serverless invoke --function",
     "invoke:local": "serverless invoke local --function",
     "deploy": "serverless deploy",
+    "undeploy": "serverless remove",
     "lint": "eslint src --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "pretty": "prettier --write \"./src/**/*.ts\"",

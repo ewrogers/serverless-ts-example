@@ -19,6 +19,7 @@ There are several `npm` scripts you can run:
 - `invoke <fn>` - Invokes a Lambda function (remotely)
 - `invoke:local <fn>` - Invokes a Lambda function (locally)
 - `deploy` - Deploys all the Lambda handlers
+- `undeploy` - Removes all deployed resources
 - `lint` - Lints the code for style errors and warnings
 - `lint:fix` - Lints the code and automatically fixes all errors
 - `pretty` - Prettifies all code files
