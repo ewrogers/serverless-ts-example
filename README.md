@@ -27,6 +27,12 @@ There are several `npm` scripts you can run:
 - `test:coverage` - Runs unit tests and shows code coverage
 - `test:watch` - Runs unit tests and watches for file changes
 
+## Local Development
+Using the `npm run dev` script will start the `serverless-offline` API gateway and display the available routes.
+
+TypeScript files will be re-compiled on change automatically, and updating the `serverless.yml` file will cause the server to restart via `nodemon`.
+
+You can use your REST client of choice (Postman, Insomnia, Paw, etc.) to test the endpoints.
 ## Plugins
 These are the plugins that are used with the Serverless framework:
 
