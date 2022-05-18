@@ -14,11 +14,11 @@ export const createUser: APIGatewayProxyHandler = async (event) => {
   const newUser: Item = {
     pk: `user#${normalizedEmailAddress}`,
     sk: now.toISOString(),
-    FirstName: firstName,
-    LastName: lastName,
-    EmailAddress: normalizedEmailAddress,
-    CreatedAt: now.toISOString(),
-    UpdatedAt: now.toISOString(),
+    firstName: firstName,
+    lastName: lastName,
+    emailAddress: normalizedEmailAddress,
+    createdAt: now.toISOString(),
+    updatedAt: now.toISOString(),
   }
 
   const command = new PutCommand({
