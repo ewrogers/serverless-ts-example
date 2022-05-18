@@ -6,7 +6,7 @@ export const createUser: APIGatewayProxyHandler = async (event) => {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'Go Serverless! Your function executed successfully.',
+      message: `Created user in ${process.env.DYNAMO_TABLE}`,
       input: event,
     }),
   }

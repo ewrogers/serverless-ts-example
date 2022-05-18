@@ -31,6 +31,7 @@ There are several `npm` scripts you can run:
 These are the plugins that are used with the Serverless framework:
 
 - [serverless-plugin-typescript](https://www.serverless.com/plugins/serverless-plugin-typescript)
+- [serverless-dotenv-plugin](https://www.serverless.com/plugins/serverless-dotenv-plugin)
 - [serverless-offline](https://www.serverless.com/plugins/serverless-offline)
 
 ## AWS Credentials
