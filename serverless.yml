@@ -12,13 +12,21 @@ provider:
   runtime: nodejs16.x
 
 functions:
+  listUsers:
+    handler: src/api.listUsers
+    events:
+      - http:
+          path: /users
+          method: get
   createUser:
     handler: src/api.createUser
     events:
       - http:
-          path: /users/
+          path: /users
           method: post
 
 custom:
   dotenv:
     logging: false
+  serverless-offline:
+    printOutput: false

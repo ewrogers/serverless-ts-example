@@ -1,0 +1,5 @@
+{
+  "exec": "serverless offline start",
+  "delay": 1000,
+  "watch": ["serverless.yml"]
+}

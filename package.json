@@ -6,7 +6,7 @@
   "scripts": {
     "dynamodb": "docker-compose up",
     "dynamodb:clear": "docker-compose down -v",
-    "dev": "serverless offline start",
+    "dev": "nodemon",
     "invoke": "serverless invoke --function",
     "invoke:local": "serverless invoke local --function",
     "deploy": "serverless deploy",
@@ -36,6 +36,7 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.92.0",
     "@aws-sdk/lib-dynamodb": "^3.92.0",
+    "@types/uuid": "^8.3.4",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -46,6 +47,7 @@
     "@typescript-eslint/parser": "^5.25.0",
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
+    "nodemon": "^2.0.16",
     "prettier": "^2.6.2",
     "serverless": "^3.17.0",
     "serverless-dotenv-plugin": "^4.0.1",
