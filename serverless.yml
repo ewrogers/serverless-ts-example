@@ -17,3 +17,15 @@ functions:
       - http:
           path: hello
           method: get
+
+custom:
+  dynamodb:
+    stages:
+      - dev
+    start:
+      docker: true
+      port: "8080"
+      inMemory: true
+      migrate: true
+      seed: true
+      convertEmptyValues: true

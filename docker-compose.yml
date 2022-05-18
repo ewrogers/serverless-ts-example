@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  dynamodb-local:
+    container_name: dynamodb-local
+    image: amazon/dynamodb-local:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - dynamodb_data:/home/dynamodblocal/data
+    networks:
+      - dynamodb_network
+    command: ["-jar", "DynamoDBLocal.jar", "-sharedDb", "-dbPath", "/home/dynamodblocal"]
+
+  dynamodb-admin:
+    container_name: dynamodb-admin
+    image: aaronshaf/dynamodb-admin:latest
+    ports:
+      - "8001:8001"
+    networks:
+      - dynamodb_network
+    environment:
+      - "DYNAMO_ENDPOINT=http://dynamodb-local:8000"
+
+networks:
+  dynamodb_network: {}
+
+volumes:
+  dynamodb_data: {}

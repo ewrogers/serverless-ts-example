@@ -4,12 +4,18 @@
   "description": "Example API using Serverless with TypeScript",
   "main": "index.js",
   "scripts": {
+    "dynamodb": "docker-compose up",
+    "dynamodb:clear": "docker-compose down -v",
+    "dev": "serverless offline start",
     "invoke": "serverless invoke --function",
     "invoke:local": "serverless invoke local --function",
     "deploy": "serverless deploy",
     "lint": "eslint src --ext .ts",
     "lint:fix": "npm run lint -- --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretty": "prettier --write \"./src/**/*.ts\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:coverage": "npm run test -- --coverage",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -26,6 +32,9 @@
     "url": "https://github.com/ewrogers/serverless-ts-example/issues"
   },
   "homepage": "https://github.com/ewrogers/serverless-ts-example#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1137.0"
+  },
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
     "@types/aws-lambda": "^8.10.97",

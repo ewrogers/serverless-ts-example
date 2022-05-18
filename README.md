@@ -1,13 +1,30 @@
 # serverless-ts-example
 Example API using Serverless with TypeScript
 
-Based on https://www.serverless.com/framework/docs/getting-started/
-
 ## Requirements
 
 - Node.js 16.x+
 - Serverless CLI
 - AWS Account
+
+### Optional
+- Docker (DynamoDB Local + Admin)
+
+## Scripts
+There are several `npm` scripts you can run:
+
+- `dynamodb` - Starts the local DynamoDB instance + admin UI
+- `dynamodb:clear` - Clears the DynamoDB data from persistent volume
+- `dev` - Starts the serverless offline API gateway
+- `invoke <fn>` - Invokes a Lambda function (remotely)
+- `invoke:local <fn>` - Invokes a Lambda function (locally)
+- `deploy` - Deploys all the Lambda handlers
+- `lint` - Lints the code for style errors and warnings
+- `lint:fix` - Lints the code and automatically fixes all errors
+- `pretty` - Prettifies all code files
+- `test` - Runs unit tests
+- `test:coverage` - Runs unit tests and shows code coverage
+- `test:watch` - Runs unit tests and watches for file changes
 
 ## Plugins
 These are the plugins that are used with the Serverless framework:
@@ -40,3 +57,11 @@ $ serverless config credentials \
 ```
 
 You should get a message showing the default profile for serverless has been configured successfully.
+
+## DynamoDB Local
+A local DynamoDB instance can be run via `npm run dynamodb`, which will run the following services via Docker:
+
+- DynamoDB Local - `http://localhost:8000`
+- DynamoDB Admin UI - `http://localhost:8001`
+
+Data is persisted in the `dynamodb_data` Docker volume.
