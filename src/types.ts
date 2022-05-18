@@ -15,8 +15,6 @@ export interface Item {
   pk: string
   sk?: string
   entityType: EntityType
-  GSI1PK?: string
-  GSI1SK?: string
   [key: string]: unknown
 }
 
