@@ -1,6 +1,6 @@
 import { APIGatewayProxyHandler } from 'aws-lambda'
 
-export const hello: APIGatewayProxyHandler = async (event) => {
+export const createUser: APIGatewayProxyHandler = async (event) => {
   await new Promise((resolve) => setTimeout(resolve, 500))
 
   return {

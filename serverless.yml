@@ -11,12 +11,12 @@ provider:
   runtime: nodejs16.x
 
 functions:
-  hello:
-    handler: src/http/handler.hello
+  createUser:
+    handler: src/api.createUser
     events:
       - http:
-          path: hello
-          method: get
+          path: user
+          method: post
 
 custom:
   dynamodb:
